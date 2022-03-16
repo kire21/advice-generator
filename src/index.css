@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+  font-family: 'Gochi Hand', cursive;;
+}
+
+.home {
+  height: 100%;
+  padding: 0 40px;
+  background: linear-gradient(to right top, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f66b93, #fc7587, #ff807d, #ff8f72, #ffa168, #ffb461, #ffc75f) ;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+/* Header Section */
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.image__welcome {
+  width: 200px;
+  margin: 30px 0 50px 0;
+}
+
+/* Advice Section */
+
+ .advice__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice__container {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.5;
+  word-spacing: 5px;
+  margin: 100px 0;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 40px;
+  border-radius: 50px;
+  box-shadow:  10px 10px 50px #F9F871,
+              -10px -10px 50px #ffffff;
+}
+
+/* Footer Section */
+
+ .footer {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+ }
+
+ .image__cat {
+  width: 200px;
+  margin: 0 0 0px 100px;
+}
+
+@media screen and (min-width: 1024px) {
+  .image__cat {
+    width: 300px;
+  }
+}
+
+/* Button */
+
+.button {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 25px;
+  display: inline-block;
+  background: transparent;
+  padding: 12px 24px;
+  border: 1px solid #F9F871;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+ }
+ 
+ .button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+ }
+ 
+ .button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #F9F871;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+ }
+ 
+ .button:hover {
+  border: 1px solid #F9F871;
+ }
+ 
+ .button:hover:before {
+  top: -35%;
+  background-color: #F9F871;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+ }
+ 
+ .button:hover:after {
+  top: -45%;
+  background-color: #F9F871;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+ }
